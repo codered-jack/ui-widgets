@@ -1,0 +1,32 @@
+.parent {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  border: 2px solid black;
+}
+
+.origin {
+  flex: 1;
+  padding: 10px;
+  background-color: green;
+}
+
+.draggable {
+  background-color: #4aae9b;
+  font-weight: normal;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.dropzone {
+  flex: 1;
+  padding: 10px;
+  background: blue;
+}
+
+.deleted {
+  flex: 1;
+  padding: 10px;
+  background: red;
+}

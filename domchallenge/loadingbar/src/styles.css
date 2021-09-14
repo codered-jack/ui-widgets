@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+  width: 100vw;
+}
+
+#progress_container {
+  margin: 0 auto;
+  width: 50%;
+  background-color: lightgray;
+}
+
+#progressbar {
+  height: 30px;
+  background-color: blue;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  width: 0;
+}
+
+.setting {
+  margin: 0 auto;
+  display: flex;
+  width: 50%;
+  justify-content: space-evenly;
+}
