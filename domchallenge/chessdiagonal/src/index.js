@@ -1,13 +1,15 @@
 import "./styles.css";
-let app = document.getElementById("app");
-let chessTable = document.createElement("table");
-let body = document.querySelector("body");
+
+const app = document.getElementById("app");
+const chessTable = document.createElement("table");
+const body = document.querySelector("body");
+
 for (let i = 0; i < 8; i++) {
-  let tr = document.createElement("tr");
+  const tr = document.createElement("tr");
 
   for (let j = 0; j < 8; j++) {
-    let td = document.createElement("td");
-    if ((i + j) % 2 === 0) {
+    const td = document.createElement("td");
+    if (!((i + j) & 1)) {
       td.setAttribute("class", "cell white");
     } else {
       td.setAttribute("class", "cell black");
@@ -21,33 +23,32 @@ for (let i = 0; i < 8; i++) {
 app.appendChild(chessTable);
 
 function removeRed() {
-  let red = document.querySelectorAll(".red");
+  const red = document.querySelectorAll(".red");
 
-  for (let redElem of red) {
+  for (const redElem of red) {
     redElem.classList.remove("red");
   }
 }
+
+const path = [
+  [1, 1],
+  [1, -1],
+  [-1, 1],
+  [-1, -1],
+];
 
 chessTable.addEventListener("click", (e) => {
   e.stopPropagation();
   removeRed();
   e.target.classList.add("red");
-  let [i, j] = e.target.id.split("-");
+  const [i, j] = e.target.id.split("-");
 
-  let path = [
-    [1, 1],
-    [1, -1],
-    [-1, 1],
-    [-1, -1]
-  ];
-
-  for (let p = 0; p < path.length; p++) {
+  for (const p of path) {
+    const [a, b] = p;
     dfs(i, j);
     function dfs(i, j) {
-      let [a, b] = path[p];
-
-      let nextx = +i + +a,
-        nexty = +j + +b;
+      const nextx = +i + a,
+        nexty = +j + b;
       if (check(nextx, nexty)) {
         dfs(nextx, nexty);
         let elem = document.getElementById(nextx + "-" + nexty);
