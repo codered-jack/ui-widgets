@@ -17,6 +17,8 @@ export const loadApp = () => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         console.log("intersecting");
+        console.log(entry.target);
+        console.log(entry.time, entry.intersectionRatio);
         entry.target.classList.add("active");
         //ob.unobserve(entry.target);
       } else {
