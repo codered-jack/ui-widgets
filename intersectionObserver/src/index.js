@@ -16,6 +16,7 @@ export const loadApp = () => {
   function touch(entries, observer) {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
+        console.log("intersecting");
         entry.target.classList.add("active");
         //ob.unobserve(entry.target);
       } else {
