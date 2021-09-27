@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>JustFit</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="search-container">
+        <input id="searchinput" type="text" placeholder="Search" />
+        <select id="dropdown">
+          <option>Choose Category</option>
+        </select>
+        <div class="radio-group">
+          <div>SortBy</div>
+          &nbsp;
+          <input type="radio" id="name" name="sort" value="title" />
+          <label for="name">Name</label><br />
+          <input type="radio" id="price" name="sort" value="price" />
+          <label for="price">Price</label><br />
+        </div>
+      </div>
+      <div class="cards"></div>
+    </div>
+  </body>
+</html>

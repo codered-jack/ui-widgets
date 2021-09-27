@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 2px 16px;
+}
+
+.search-container {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.radio-group {
+  display: flex;
+  margin-left: 10px;
+  align-items: center;
+}
+.search-container input {
+  padding: 20px 10px;
+  font-size: 14px;
+  width: 80%;
+}
