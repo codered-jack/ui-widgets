@@ -20,7 +20,7 @@ export const loadApp = () => {
         console.log(entry.target);
         console.log(entry.time, entry.intersectionRatio);
         entry.target.classList.add("active");
-        //ob.unobserve(entry.target);
+        //observer.unobserve(entry.target);
       } else {
         entry.target.classList.remove("active");
       }
